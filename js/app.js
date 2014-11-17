@@ -34,7 +34,6 @@ function onReady() {
     	}
     ];
     var personForm = document.getElementById('person-form');
-
     var standingsSelect = personForm.elements['standing'];
     var idx;
     var option;
@@ -47,9 +46,8 @@ function onReady() {
     }
 
     personForm.addEventListener('submit', onSubmit);
-
-
 } //onReady()
+
 
 /* onSubmit()
  * Called when the user attempts to submit the form
@@ -81,13 +79,14 @@ function validateForm(form) {
     }
 
     if (!formValid) {
-    	var errMsg = document.getElementById('error-message');
-    	errMsg.innerHTML = 'Please fill out the required fields!';
-    	errMsg.style.display = 'block';
+        var errMsg = document.getElementById('error-message');
+        errMsg.innerHTML = 'Please fill out the required fields!';
+        errMsg.style.display = 'block';
     }
 
     return formValid;
 } //validateForm()
+
 
 /* validateRequiredField()
 * This function validates a field that is required. If the field does not have a value, or has only spaces,
